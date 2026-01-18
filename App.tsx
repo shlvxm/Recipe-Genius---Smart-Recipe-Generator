@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { jsPDF } from 'jspdf';
-import { Layout } from './components/Layout.tsx';
-import { LoginPage } from './components/LoginPage.tsx';
-import { CameraCapture } from './components/CameraCapture.tsx';
-import { DietaryPreference, Recipe, DetectionResult, ShoppingItem, UserProfile, Store as StoreType } from './types.ts';
-import { analyzeImageAndGenerateRecipes, generateExploreRecipes, findNearbyStores, searchRecipes } from './services/geminiService.ts';
+import { Layout } from './components/Layout';
+import { LoginPage } from './components/LoginPage';
+import { CameraCapture } from './components/CameraCapture';
+import { DietaryPreference, Recipe, DetectionResult, ShoppingItem, UserProfile, Store as StoreType } from './types';
+import { analyzeImageAndGenerateRecipes, generateExploreRecipes, findNearbyStores, searchRecipes } from './services/geminiService';
 import { 
   Loader2, 
   ChevronRight, 
