@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -14,16 +13,17 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
-    // Fixes the "chunk size limit" warning by increasing the threshold
+    // Fixes the "chunk size limit" warning by increasing the threshold to 2MB
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
-        // Splitting large vendor libraries into their own chunks for better caching and performance
+        // Advanced manual chunking to reduce individual file sizes
         manualChunks(id) {
           if (id.includes('node_modules')) {
             if (id.includes('jspdf')) return 'vendor-jspdf';
             if (id.includes('@google/genai')) return 'vendor-genai';
             if (id.includes('lucide-react')) return 'vendor-icons';
+            if (id.includes('react')) return 'vendor-react-core';
             return 'vendor';
           }
         },
