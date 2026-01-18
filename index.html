@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeGenius - AI Recipe Generator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // Custom colors if needed
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        :root {
+            --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(17,24,17)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+        }
+        body {
+            font-family: 'Work Sans', 'Noto Sans', sans-serif;
+        }
+        .bg-recipe-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCblHvr3MARx0Mso81QqdbReeuNwdczC0La1zmYRAxJy2_uhnTmgZ3_dO_25hauoQlxCiki4LNTKZEc6ZtjDtbzyds2TOldyu970Lvvwmy9RS_rFocwTG4FgUILHfGXEzPzTbE8UHaWji94RDatSmI6LbMJOvDXkl14cU_ftboUDZeqkujMwYgJ10bEVe0HM81yaKSQZ4shLjNYsYOeTAtDDk0nGdto0tvIFmtYO8VRG-ql6M2QJB96PP1TbbpfU71PvIa2DbbGHz8");
+        }
+        .dark ::-webkit-scrollbar {
+          width: 8px;
+        }
+        .dark ::-webkit-scrollbar-track {
+          background: #111811;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+          background: #2a302a;
+          border-radius: 10px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1"
+  }
+}
+</script>
+</head>
+<body class="bg-white dark:bg-[#111811] min-h-screen text-[#111811] dark:text-white transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "FlavorAI - Smart Recipe Generator",
+  "description": "An AI-powered recipe generator that identifies ingredients from photos and creates personalized recipes based on dietary preferences.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
